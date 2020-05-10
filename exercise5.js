@@ -1,7 +1,11 @@
-const requestListener = function (req, res) {
-  // Define a function called requestListener that takes
-  // as paramaters, a request object and response object
-  res.writeHead(200); // Send Header 200 (success) response back and
-  res.end("Hello, Exercise 1!"); // send Content body "Hello, Exercise 1!" response back
-  // to the user making request
-};
+// ANCHOR EXERCISE 5 //
+
+
+var http = require('http');
+
+var server = http.createServer(function (request, response) {
+  response.writeHead(200, { "Content-Type": "text/plain" });
+  response.end("Hello World\n");
+});
+server.listen(80);
+console.log("Server running at http://127.0.0.1:80/");
