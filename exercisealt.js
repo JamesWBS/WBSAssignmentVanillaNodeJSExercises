@@ -1,14 +1,8 @@
-// ANCHOR EXERCISE EXTRA CREDIT JAMES INSTRUCTIONS //
-
-// Overall: create basic NodeJS HTTP server
-const http = require("http");
-
-
 
 const requestListener = function (req, res) {               // Define a function called requestListener that takes 
     // as paramaters, a request object and response object 
     res.writeHead(200);                                     // Send Header 200 (success) response back and
-    res.end("Hello, ESTRA CREDIT NEW NODEJS HTTP SERVER!"); // send Content body "Hello, Exercise 1!" response back 
+    res.end("Hello, EXTRA CREDIT NEW NODEJS HTTP SERVER!"); // send Content body "Hello, Exercise 1!" response back 
     // to the user making request 
 };
 
@@ -19,3 +13,4 @@ const requestListener = function (req, res) {               // Define a function
 // specified port - 8080, in this case.
 const server = http.createServer(requestListener);
 server.listen(8080);
+
